@@ -1,12 +1,22 @@
-import Counter from './components/counter';
+import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import { Provider } from 'react-redux';
 import store from './redux/store';
+import Header from './components/Header';
+import Counter from './components/counter';
+import Ships from './components/Ships';
+import Todo from './components/Todo';
+
 function App() {
   return (
     <Provider store={store}>
-      <div className="App">
-        <Counter />
-      </div>
+      <Router>
+        <Header />
+        <Routes>
+          <Route exact path='/counter' element={<Counter />} />
+          <Route exact path='/ships' element={<Ships />} />
+          <Route exact path='/todo' element={<Todo />} />
+        </Routes>
+      </Router>
     </Provider>
   );
 }

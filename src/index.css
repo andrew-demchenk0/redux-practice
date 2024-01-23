@@ -25,4 +25,10 @@ code {
     align-items: center;
     justify-content: center;
 }
+.header{
+    padding: 20px 50px 50px 50px;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
 
